@@ -19,7 +19,7 @@ Deedy-Resume-For-Chinese
 中文字体方面，选择了[思源黑体](https://github.com/adobe-fonts/source-han-sans)和[思源宋体](https://github.com/adobe-fonts/source-han-serif)，是目前比较流行的开源字体选择。
 
 <div align="center">
-	<img src="./OpenFonts.Chinese/sample-image.png" width="550">
+	<img src="./OpenFonts.Chinese/sample-resume.png" width="550">
 </div>
 
 ### OpenFonts
@@ -29,7 +29,7 @@ Deedy-Resume-For-Chinese
 如果你想自己选择字体，推荐阅读 [Resume: A Tale of Desire, Intrigue, and Formatting](http://www.zackgrossbart.com/hackito/resume/)，这篇文章列举了很多开源的字体选择。
 
 <div align="center">
-	<img src="./OpenFonts/sample-image.png" width="550">
+	<img src="./OpenFonts/sample-resume.png" width="550">
 </div>
 
 ### MacFonts
