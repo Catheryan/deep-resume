@@ -47,7 +47,8 @@
 
 \documentclass[]{deedy-resume-openfont}
 \usepackage{fancyhdr}
-    
+\usepackage{xeCJK} % 自动中文断行推荐
+\setCJKmainfont{PingFang SC} % 或你喜欢的字体
 \pagestyle{fancy}
 \fancyhf{}
     
@@ -154,7 +155,7 @@ Jenkins \textbullet{} 自动化测试
 \end{minipage} 
 \hfill
 \begin{minipage}[t]{0.75\textwidth} 
-
+\raggedright % 自动左对齐并换行
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -162,14 +163,13 @@ Jenkins \textbullet{} 自动化测试
 \section{从业经历}
 \sectionsep
 \runsubsection{腾讯·OTT视频业务}
-\descript{实习}
 \vspace{0.1em}
+\descript{实习}
 \location{2017.06 - 2017.09 | 深圳}
 \vspace{\topsep}
 \begin{tightemize}
     \item 合作一份实用性专利 \textbf{已归档}
 \end{tightemize}
-\sectionsep
 
 \runsubsection{阿里巴巴·大文娱}
 \descript{优酷·基础业务Android开发工程师}
@@ -179,7 +179,6 @@ Jenkins \textbullet{} 自动化测试
     \item 主要负责首页基础业务以及性能优化
     \item 期间多次获得高潜评价
 \end{tightemize}
-\sectionsep
 
 \runsubsection{哔哩哔哩·商业}
 \descript{Android开发工程师}
@@ -189,40 +188,79 @@ Jenkins \textbullet{} 自动化测试
     \item 商业化交易和票务对接人，后续负责广告业务
     \item 主要负责需求工程设计以及技术攻关
 \end{tightemize}
-\sectionsep
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     RESEARCH
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{项目经历-核心}
-\sectionsep
-\runsubsection{\href{}{\bf 动态化落地}}
+\runsubsection{{\bf 动态化落地}}
 \runsubsection{Owner}
 \descript{基于redwood的跨端动态化框架}
 \vspace{0.1em}
 \location{2025.03 - 2025.05}
-\vspace{0.1em}
 \begin{tightemize}
-    \item 项目成果：从零搭建的动态化，构建生态能力并落地业务，节约覆盖从一周到1-2天
-    \item 角色价值：作为项目owner，负责项目的整体设计和落地，提供跨端的动态化能力
-    \item 主要细节：涉及KMP核心沙盒工程以及Zipline的集成以及业务容错方案设计
-    \end{tightemize}
-\sectionsep
+    \item \textbf{项目背景}：
+        \begin{itemize}
+            \item 线上业务迭代周期长，运营成本高，需提升效率与速率。
+            \item 部门搭建可视化组件平台，增强运营与扩展能力。
+            \item 已具备丰富KMP跨端能力，助力平台化和多端发展。
+        \end{itemize} 
+    \item \textbf{方案对比}：
+        \begin{itemize}
+            \item 复用KMP组件库，支持快速页面搭建，实现可视化平台。
+            \item 利用KMP多端能力，统一Kotlin代码，输出JS/C++产物，低成本支持多端。
+            \item 对比RN与Redwood KMP方案，最终采纳Redwood，完成性能与帧率测试。
+        \end{itemize}
+    \item \textbf{项目成果}：
+        \begin{itemize}
+            \item 从0到1完成动态体系搭建，实现远端分发、CI/CD及热更新。
+            \item 初步搭建可视化组件库，支持业务自助页面配置。
+            \item 业务上线周期由一周缩短至1-2天，迭代与实验效率显著提升。
+        \end{itemize}    
+    \item \textbf{个人贡献}：
+        \begin{itemize}
+            \item 主导项目整体设计与落地，推动项目进展。
+            \item 输出KMP沙盒工程、Zipline集成及业务容错方案。
+            \item 搭建并规范跨端UI组件库，确保复用与一致性。
+        \end{itemize}    
+\end{tightemize}
 
-\runsubsection{\href{}{\bf 跨端链式事务处理}}
+\runsubsection{{\bf 跨端链式事务处理}}
 \runsubsection{Owner}
 \descript{基于KMP的链式点击处理框架}
 \vspace{0.1em}
 \location{2024.12 - 2025.02}
 \vspace{0.1em}
 \begin{tightemize}
-    \item 项目成果：多端点击逻辑统一的广告点击节点，节约后续双端坑位开发时间近百分之80
-    \item 角色体现：作为项目owner，设计核心链式处理体系以及全生命周期分层设计
-    \item 主要细节：主要负责核心链式处理框架，设计节点组合以及跨端差异化接口设计
-    \end{tightemize}
+    \item \textbf{项目背景}：
+        \begin{itemize}
+            \item 广告业务在多端（如iOS、Android等）存在点击逻辑分散、过程开发重复离散的问题，导致双端坑位开发成本高、效率低。
+            \item 亟需通过统一方案减少端间重复开发，实现广告点击节点逻辑的高效复用与管理。
+        \end{itemize}
+    \item \textbf{方案对比}：
+        \begin{itemize}
+            \item 传统方案：各端独立实现广告点击节点，导致坑位重复开发、维护成本高，且易出现逻辑不一致。
+            \item 新方案：引入统一的广告点击节点链式处理体系，采用分层设计，实现多端逻辑统一，支持节点灵活组合及跨端接口差异化处理。
+        \end{itemize}
+    \item \textbf{项目成果}：
+        \begin{itemize}
+            \item 成功实现多端广告点击逻辑的统一节点管理，显著提升复用率。
+            \item 双端坑位开发时间节约近80\%，提高整体开发效率和业务迭代速度。
+        \end{itemize}
+    \item \textbf{个人贡献}：
+        \begin{itemize}
+            \item 作为项目Owner，主导设计并落地核心链式处理体系及全生命周期分层架构。
+            \item 负责核心链式处理框架的开发，设计节点灵活组合机制，以及实现跨端差异化接口适配。
+        \end{itemize}
+\end{tightemize}
 \sectionsep
+\end{minipage} 
 
+% 第二页
+\newpage
+\begin{minipage}[t]{0.2\textwidth} \end{minipage}
+\hfill
+\begin{minipage}[t]{0.75\textwidth} 
 \runsubsection{\href{}{\bf InAppMessage}}
 \runsubsection{Owner}
 \descript{基于轮训结构的站内信系统}
@@ -230,11 +268,27 @@ Jenkins \textbullet{} 自动化测试
 \location{2021.11 - 2022.01}
 \vspace{0.1em}
 \begin{tightemize}
-    \item 项目成果：基于轮训的站内信系统，提供交易业务触达通道，有效提高购买转化率
-    \item 角色体现：作为项目Owner，主要负责前期方案取舍以及后期端智能调研
-    \item 主要细节：设计轮训消息体系，利用aidl和atomic解决跨进程通信以及资源竞争问题
-    \end{tightemize}
-\sectionsep
+    \item \textbf{项目背景}：
+        \begin{itemize}
+            \item 交易业务需要高效的站内信触达通道，没有弹窗和浮层触达方案，影响用户体验和转化。
+            \item 后台长链接通道未搭建，现有方案无法满足高并发和高可用的需求。
+        \end{itemize}
+    \item \textbf{方案对比}：
+        \begin{itemize}
+            \item 常用方案：需要构建长链接通道，开发和维护成本高，且易受网络环境影响，稳定性和兼容性存在挑战；长链接通道后台暂未搭建
+            \item 新方案：采用优化轮训结构，结合aidl和atomic原语，提升消息处理效率与系统稳定性，简化跨进程通信和资源管理。
+        \end{itemize}
+    \item \textbf{项目成果}：
+        \begin{itemize}
+            \item 成功搭建基于轮训的站内信系统，显著提高交易业务触达效率和购买转化率。
+        \end{itemize}
+    \item \textbf{个人贡献}：
+        \begin{itemize}
+            \item 作为项目Owner，主导整体方案设计与落地，负责前期方案选型。
+            \item 设计轮训消息体系，利用aidl和atomic解决跨进程通信及资源竞争难题。
+            \item 后期对于策略，也做了端智能调研相关工作，主要运用tensorflow lite进行模型推理，提升端侧智能化能力。
+        \end{itemize}
+\end{tightemize}
 
 \runsubsection{\href{}{\bf TradeSdk}}
 \runsubsection{Owner}
@@ -243,10 +297,27 @@ Jenkins \textbullet{} 自动化测试
 \location{2023.07 - 2023.9}
 \vspace{0.1em}
 \begin{tightemize}
-    \item 项目成果：各渠道交易正逆向流程Native工程化，节约原有1hc，提升交易体验
-    \item 角色体现：作为项目Owner，进行流程分层设计以及整个线上方案过渡
-    \item 主要细节：设计提供路由Config迁移方案以及进行gradle插件的分层设计
-    \end{tightemize}
+    \item \textbf{项目背景}：
+        \begin{itemize}
+            \item 已有多渠道交易流程是web流程，需要维护多套，影响整体交易体验和开发效率。
+            \item web存在体验较差以及功能落后等问题，需要推动Native工程化，提升交易流程的稳定性和可维护性。
+        \end{itemize}
+    \item \textbf{方案考虑点}：
+        \begin{itemize}
+            \item 大仓流程定制化严重，缺乏统一工程化sdk标准，且各宿主渠道底层库差异较大
+            \item Native工程化需要考虑多渠道的差异化配置和路由处理，确保各渠道流程的稳定性和一致性。
+        \end{itemize}
+    \item \textbf{项目成果}：
+        \begin{itemize}
+            \item 平稳实现各渠道交易正逆向流程的Native工程化，节约原有开发人力成本（1hc），显著提升交易体验与迭代效率。
+            \item 提供一套大仓的交易流程工程化sdk解决方案，支持多渠道的差异化配置和路由处理，沉淀了一套可复用的工程化sdk插件能力
+        \end{itemize}
+    \item \textbf{个人贡献}：
+        \begin{itemize}
+            \item 作为项目Owner，主导流程分层设计和整体线上路由方案配置进行过渡，做到有问题及时回滚。
+            \item 采用分层设计优化路由Config迁移，gradle插件实现分层解耦以及渠道环境变量配置，便于业务根据渠道区分维护与扩展。
+        \end{itemize}
+\end{tightemize}
 \sectionsep
 
 \runsubsection{\href{}{\bf 半屏容器栈}}
@@ -256,24 +327,32 @@ Jenkins \textbullet{} 自动化测试
 \location{2023.02 - 2023.04}
 \vspace{0.1em}
 \begin{tightemize}
-    \item 项目成果：容器栈的落地，交易流程投放任意场景并提供技术基建给后续业务方
-    \item 角色体现：项目Owner，负责容器栈搭载native面板以及web面板，整体对外业务对接
-    \item 主要细节：复用原有fragment页面能力和原有路由，进行容器事务处理能力
-    \end{tightemize}
+    \item \textbf{项目背景}：
+        \begin{itemize}
+            \item 交易流程需要灵活投放到不同业务场景，原有架构对扩展和业务对接支持有限，缺乏统一技术基建。
+            \item 交易现有的正向和逆向流程分散在不同业务方，需要进行复用和整合，提升业务对接效率。
+        \end{itemize}
+    \item \textbf{方案对比}：
+        \begin{itemize}
+            \item 原有方案：页面能力分散，路由及事务处理缺乏统一框架，业务方接入成本高。
+            \item 新方案：搭建容器栈，统一支持native面板及web面板，复用fragment页面能力和路由体系，提供标准化容器事务处理能力；
+            \item 需要设计多种panel的适配方案，支持web和native面板的灵活投放。
+        \end{itemize}
+    \item \textbf{项目成果}：
+        \begin{itemize}
+            \item 成功落地容器栈，支持交易流程灵活投放任意场景，提升业务对接效率。
+            \item 半屏容器方案为后续业务方提供高复用技术基建，提升整体对外业务对接效率。
+        \end{itemize}
+    \item \textbf{个人贡献}：
+        \begin{itemize}
+            \item 作为项目Owner，主导容器栈方案设计与落地，实现native和web面板搭载，负责整体对外业务对接。
+            \item 复用原有fragment页面业务能力和路由体系，设计并实现容器事务处理能力，提升系统扩展性与可维护性。
+        \end{itemize}
+\end{tightemize}
 \sectionsep
+\end{minipage}
 
-\runsubsection{\href{}{\bf Flutter实验}}
-\runsubsection{Owner}
-\descript{基于Flutter的落地页}
-\vspace{0.1em}
-\location{2020.04 - 2020.06}
-\vspace{0.1em}
-\begin{tightemize}
-    \item 项目成果：主要利用Flutter的跨端能力，提供页面能力，
-    \item 角色体现：作为贡献者，帮助搭建Futter生态，包含基础组件以及cd能力
-    \item 主要细节：接入阿里的atalss工程能力以及flutter组件生态能力
-    \end{tightemize}
-\sectionsep
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     OPEN SOURCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -295,12 +374,39 @@ Jenkins \textbullet{} 自动化测试
 % \bibliography{publications}
 % \nocite{*}
 
-\end{minipage} 
 \newpage
-% 第二页
+% 第三页
 \begin{minipage}[t]{0.2\textwidth} \end{minipage}
 \hfill
 \begin{minipage}[t]{0.75\textwidth} 
+
+\runsubsection{\href{}{\bf Flutter实验}}
+\runsubsection{Owner}
+\descript{基于Flutter的落地页}
+\vspace{0.1em}
+\location{2020.04 - 2020.06}
+\vspace{0.1em}
+\begin{tightemize}
+    \item \textbf{项目背景}：
+        \begin{itemize}
+            \item 多端页面开发成本高，业务需求快速迭代，亟需统一跨端页面能力与组件生态，提升开发效率与复用率。
+        \end{itemize}
+    \item \textbf{方案对比}：
+        \begin{itemize}
+            \item 原有方案：各端独立开发，组件生态割裂，工程能力不统一，持续集成能力有限。
+            \item 新方案：引入Flutter跨端能力，接入阿里atalss工程能力，统一基础组件及工程能力，实现多端高效协同。
+        \end{itemize}
+    \item \textbf{项目成果}：
+        \begin{itemize}
+            \item 主要利用Flutter的跨端能力，搭建统一页面能力，提升业务开发效率与组件复用率。
+        \end{itemize}
+    \item \textbf{个人贡献}：
+        \begin{itemize}
+            \item 作为贡献者，参与Flutter生态搭建，包括基础组件开发与持续集成（CD）能力建设。
+            \item 负责接入阿里atalss工程能力，完善Flutter组件生态能力，助力团队多端协同。
+        \end{itemize}
+\end{tightemize}
+\sectionsep
 
 \runsubsection{\href{}{\bf 首页启动优化}}
 \runsubsection{贡献者}
@@ -309,10 +415,25 @@ Jenkins \textbullet{} 自动化测试
 \location{2020.07 - 2020.10}
 \vspace{0.1em}
 \begin{tightemize}
-    \item 项目成果：首页启动流程优化，减少原有1.5s到0.8s，提升用户体验
-    \item 角色体现：作为贡献者，主要利用KSP的能力，进行前期数据打桩以及DAG的设计
-    \item 主要细节：DAG任务前置编译检查以及KSP任务耗时监控
-    \end{tightemize}
+    \item \textbf{项目背景}：
+        \begin{itemize}
+            \item 首页启动流程复杂，任务调度与依赖管理不够高效，导致启动耗时较长，影响用户体验。
+        \end{itemize}
+    \item \textbf{方案对比}：
+        \begin{itemize}
+            \item 原有方案：任务依赖关系不清晰，缺乏统一调度机制，启动流程无法精细优化，数据采集和分析能力有限。
+            \item 新方案：引入KSP能力，设计DAG（有向无环图）任务调度体系，实现任务依赖前置编译检查及耗时监控，优化整体启动流程。
+        \end{itemize}
+    \item \textbf{项目成果}：
+        \begin{itemize}
+            \item 首页启动流程优化，启动耗时由1.5s降至0.8s，显著提升用户体验。
+        \end{itemize}
+    \item \textbf{个人贡献}：
+        \begin{itemize}
+            \item 作为贡献者，利用KSP能力进行数据打桩、DAG设计与实现。
+            \item 负责DAG任务的前置编译检查和KSP任务耗时监控，助力流程优化与性能提升。
+        \end{itemize}
+\end{tightemize}
 \sectionsep
 
 \section{开源贡献}
